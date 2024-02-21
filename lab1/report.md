@@ -1,5 +1,8 @@
 # Report for the First Laboritory Work
 
+<br><br>
+<br><br>
+
 ## Contents
 
 - [Objectives](#objectives)
@@ -10,9 +13,6 @@
   - [Finite Automata](#finite-automata)
   - [Results](#results)
 - [Conclusion](#conclusion)
-
-<br><br>
-<br><br>
 
 ## Objectives
 
