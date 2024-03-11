@@ -6,3 +6,8 @@ This repository is made for my DSL courses at uni
 
 - [Laboratory Work](lab1/main.py)
 - [Laboratory Report](lab1/report.md)
+
+## Lab 2: Determinism in Finite Automata. Conversion from NDFA 2 DFA. Chomsky Hierarchy.
+
+- [Laboratory Work](lab2/main.py)
+- [Laboratory Report](lab2/report.md)
