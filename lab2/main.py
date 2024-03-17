@@ -27,7 +27,7 @@ nfa = FiniteAutomata(
 
 print("Is our NFA Deterministic:")
 print(is_deterministic(nfa))
-#isualize(nfa, 'nfa.jpg')
+#visualize(nfa, 'nfa')
 
 print("\nNFA to DFA:")
 dfa = ndf_to_dfa(nfa)

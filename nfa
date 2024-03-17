@@ -1,0 +1,18 @@
+// Finite Automata
+digraph {
+	node [shape=circle]
+	0
+	node [shape=circle]
+	1
+	node [shape=doublecircle]
+	2
+	0 -> 0 [label=a]
+	0 -> 1 [label=a]
+	1 -> 0 [label=a]
+	0 -> 0 [label=b]
+	1 -> 2 [label=b]
+	2 -> 2 [label=b]
+	node [shape=none]
+	start [label=""]
+	start -> 0
+}
