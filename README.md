@@ -11,3 +11,8 @@ This repository is made for my DSL courses at uni
 
 - [Laboratory Work](lab2/main.py)
 - [Laboratory Report](lab2/report.md)
+
+## Lab 3: Lexer & Scanner
+
+- [Laboratory Work](lab3/main.py)
+- [Laboratory Report](lab3/report.md)
