@@ -24,6 +24,12 @@ class Lexer:
                 return Token(TOKEN_FLOAT, float(float_str))
             else:
                 return Token(TOKEN_INTEGER, int(float_str))
+            
+        variable_match = VARIABLE_PATTERN.match(text, self.pos)
+        if variable_match:
+            variable_str = variable_match.group()
+            self.pos = variable_match.end()
+            return Token(TOKEN_VARIABLE, variable_str)
 
         # Match operators
         current_char = text[self.pos]
@@ -45,6 +51,9 @@ class Lexer:
         elif current_char == ')':
             self.pos += 1
             return Token(TOKEN_RPAREN, ')')
+        elif  current_char == '=':
+            self.pos +=1
+            return Token(TOKEN_ASSIGN, '=')
 
         # Skip whitespace
         whitespace_match = WHITESPACE_PATTERN.match(text, self.pos)
