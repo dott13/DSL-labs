@@ -15,6 +15,15 @@ class Lexer:
         if self.pos >= len(text):
             return Token(TOKEN_EOF, None)
 
+        function_match = FUNCTION_PATTERN.match(text, self.pos)
+        if function_match:
+            function_str = function_match.group()
+            # Extracting function name and arguments
+            function_name, arguments = function_str.split('(')
+            arguments = arguments[:-1]  # Removing the closing parenthesis
+            self.pos = function_match.end()
+            return Token(TOKEN_FUNCTION, (function_name, arguments))
+        
         float_match = FLOAT_PATTERN.match(text, self.pos)
         if float_match:
             float_str = float_match.group()
