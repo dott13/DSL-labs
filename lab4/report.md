@@ -4,6 +4,20 @@
 
 Regular expressions (regex) are powerful tools used for pattern matching in strings. They provide a concise and flexible means to search, extract, and manipulate text based on specific patterns. Regular expressions consist of a sequence of characters and special metacharacters that define a search pattern.
 
+## Objectives
+
+1. Write and cover what regular expressions are, what they are used for;
+
+2. Below you will find 3 complex regular expressions per each variant. Take a variant depending on your number in the list of students and do the following:
+
+   a. Write a code that will generate valid combinations of symbols conform given regular expressions (examples will be shown).
+
+   b. In case you have an example, where symbol may be written undefined number of times, take a limit of 5 times (to evade generation of extremely long combinations);
+
+   c. **Bonus point**: write a function that will show sequence of processing regular expression (like, what you do first, second and so on)
+
+Write a good report covering all performed actions and faced difficulties.
+
 ## Applications of Regular Expressions
 
 Regular expressions find extensive use in various domains, including:
@@ -70,13 +84,18 @@ As you can see we have a <b>generate_strings</b> function. This is the function 
 ```python
 def generate_string(regex):
     string = ""
-    steps = []
+    transitions = []
     i = 0
+```
+
+To find a match the easiest way is to compare with every command we include in our regex list, for example in this case it searches for every open paranthesese and closed ones to ensure it finds all the matches needed in the interiour of the parentesese, after that it uses the inbuilt method <i>findall</i> and concats the character gotten to our string working for our transitions part aswell.
+
+```python
     while i < len(regex):
         if regex[i] == "(" and regex.find(")", i) == len(regex) - 1 or (regex[i] == "(" and regex[regex.find(")", i) + 1] not in ["*", "+", "?", "{"]):
             char = random.choice(options(re.findall(r'\((.*?)\)', regex[i:])[0]))
             string += char
-            steps.append(f"Adding {char} to string - {string}")
+            transitions.append((f"{string[-2]} -> {char}" if len(string) >= 2 else f"Start -> {char}"))
             i = regex.find(")", i)
 ```
 
