@@ -16,3 +16,8 @@ This repository is made for my DSL courses at uni
 
 - [Laboratory Work](lab3/main.py)
 - [Laboratory Report](lab3/report.md)
+
+## Lab 4: Regular Expressions and String Generations
+
+- [Laboratory Work](lab4/main.py)
+- [Laboratory Report](lab4/report.md)
