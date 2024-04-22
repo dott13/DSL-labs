@@ -1,22 +1,19 @@
-import os
-
-from lab5.toChomsky import ChomskyConverter
-from lab5.grammar import Grammar
+from toChomsky import ChomskyConverter
+from grammar import Grammar
 
 
 class Main:
 
     @staticmethod
     def run():
-        my_grammar = Grammar(VN={'S', 'A', 'B', 'C', 'D', 'X'},
+        my_grammar = Grammar(VN={'S', 'A', 'B', 'C', 'E'},
                              VT={'a', 'b'},
                              P={
-                                 'S': {'A'},
-                                 'A': {'aX', 'bX'},
-                                 'X': {'', 'BX', 'b'},
-                                 'B': {'AD'},
-                                 'D': {'aD', 'a'},
-                                 'C': {'Ca'}
+                                 'S': {'bAC', 'B'},
+                                 'A': {'a', 'aS', 'bCaCb'},
+                                 'B': {'AC', 'bS', 'aAa'},
+                                 'C': {'', 'AB'},
+                                 'E': {'BA'}
                              })
         print(my_grammar)
 
@@ -26,5 +23,5 @@ class Main:
         print(upd_grammar)
 
 
-if os.path.basename(__file__) == "main.py":
+if __name__ == '__main__':
     Main.run()

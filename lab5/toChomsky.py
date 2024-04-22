@@ -1,4 +1,4 @@
-from lab5.grammar import Grammar
+from grammar import Grammar
 
 
 class ChomskyConverter:
@@ -19,7 +19,7 @@ class ChomskyConverter:
         print('\nafter eliminating nonproductive symbols')
         print(grammar)
 
-        self.nonproductiveElimination()
+        self.inaccessibleElimination()
         grammar = Grammar(self.VN, self.VT, self.P)
         print('\nafter eliminating inaccessible symbols')
         print(grammar)
