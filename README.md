@@ -21,3 +21,13 @@ This repository is made for my DSL courses at uni
 
 - [Laboratory Work](lab4/main.py)
 - [Laboratory Report](lab4/report.md)
+
+## Lab5: Chomsky Normal Form
+
+- [Laboratory Work](lab5/main.py)
+- [Laboratory Report](lab5/report.md)
+
+## Lab6: Parser & Building an Abstract Syntax Tree
+
+- [Laboratory Work](lab6/main.py)
+- [Laboratory Report](lab6/readme.md)
